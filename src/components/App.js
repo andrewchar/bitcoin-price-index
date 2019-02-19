@@ -5,12 +5,13 @@ import useFetch from './API/useFetch';
 
 // components
 import Chart from './chart/chart';
+import Header from './header/header';
+import Footer from './footer/footer';
 
 import '../styles/normalize.css';
-// import styles from "./App.module.css";
+import './app.css';
 
-function App() {
-  const [bitcoinData, setBitcoinData] = useState(null);
+const App = () => {
   const data = useFetch(
     'https://api.coindesk.com/v1/bpi/historical/close.json'
   );
@@ -19,11 +20,13 @@ function App() {
     return <div>Loading...</div>;
   } else {
     return (
-      <div>
+      <div className="app-container">
+        <Header />
         <Chart data={data} />
+        <Footer />
       </div>
     );
   }
-}
+};
 
 export default App;

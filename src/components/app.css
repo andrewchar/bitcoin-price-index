@@ -1,0 +1,15 @@
+.app-container {
+  width: 100%;
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+@media (min-width: 1224px) {
+  .app-container {
+    width: 1224px;
+    margin: 0 auto;
+  }
+}
