@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer>
       <h2>
-        Powered by
+        Powered by{' '}
         <a
           href="https://www.coindesk.com/price/bitcoin"
           target="_blank"
